@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class suku_cadang extends CI_Controller {
+class Suku_cadang extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
