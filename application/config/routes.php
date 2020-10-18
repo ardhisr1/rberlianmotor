@@ -59,3 +59,12 @@ $route['translate_uri_dashes'] = FALSE;
 $route['detail-product/(:any)'] = 'Products/detail/$1'; // WITH ID
 $route['detail-product'] = 'Products/detail'; // WITHOUT ID RETURN ERROR
 $route['add-product'] = 'Products/add'; // ADD PRODUCT
+
+
+// MERK ROUTE
+$route['add-merk'] = 'Merk/add'; // ADD MERK
+$route['edit-merk/(:any)'] = 'Merk/detail/$1'; // EDIT MERK
+$route['edit-merk'] = 'Merk/detail/'; // EDIT MERK WITHOUT ID == RETURN FALSE
+$route['delete-merk/(:any)'] = 'Merk/delete/$1'; // DELETE MERK
+$route['delete-merk'] = 'Merk/delete/'; // DELETE MERK WITHOUT ID == RETURN FALSE
+$route['list-merk'] = 'Merk/index'; // LIST MERK
