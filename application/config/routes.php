@@ -68,3 +68,13 @@ $route['edit-merk'] = 'Merk/detail/'; // EDIT MERK WITHOUT ID == RETURN FALSE
 $route['delete-merk/(:any)'] = 'Merk/delete/$1'; // DELETE MERK
 $route['delete-merk'] = 'Merk/delete/'; // DELETE MERK WITHOUT ID == RETURN FALSE
 $route['list-merk'] = 'Merk/index'; // LIST MERK
+
+
+
+// TYPE ROUTE
+$route['add-type'] = 'Type/add'; // ADD TYPE
+$route['edit-type/(:any)'] = 'Type/detail/$1'; // EDIT TYPE
+$route['edit-type'] = 'Type/detail/'; // EDIT TYPE WITHOUT ID == RETURN FALSE
+$route['delete-type/(:any)'] = 'Type/delete/$1'; // DELETE TYPE
+$route['delete-type'] = 'Type/delete/'; // DELETE TYPE WITHOUT ID == RETURN FALSE
+$route['list-type'] = 'Type/index'; // LIST TYPE
