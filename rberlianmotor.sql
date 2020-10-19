@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 15, 2020 at 06:16 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.10
+-- Waktu pembuatan: 19 Okt 2020 pada 11.00
+-- Versi server: 10.1.37-MariaDB
+-- Versi PHP: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -24,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cart`
+-- Struktur dari tabel `cart`
 --
 
 CREATE TABLE `cart` (
@@ -37,7 +38,7 @@ CREATE TABLE `cart` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customers`
+-- Struktur dari tabel `customers`
 --
 
 CREATE TABLE `customers` (
@@ -50,7 +51,7 @@ CREATE TABLE `customers` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `det_transaction`
+-- Struktur dari tabel `det_transaction`
 --
 
 CREATE TABLE `det_transaction` (
@@ -63,7 +64,7 @@ CREATE TABLE `det_transaction` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori`
+-- Struktur dari tabel `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -71,10 +72,17 @@ CREATE TABLE `kategori` (
   `category` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `kategori`
+--
+
+INSERT INTO `kategori` (`kategory_id`, `category`) VALUES
+(2, 'stang edit');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `merks`
+-- Struktur dari tabel `merks`
 --
 
 CREATE TABLE `merks` (
@@ -82,10 +90,20 @@ CREATE TABLE `merks` (
   `merk` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `merks`
+--
+
+INSERT INTO `merks` (`merk_id`, `merk`) VALUES
+(1, 'honda'),
+(2, 'suzuki'),
+(3, 'yamaha'),
+(4, 'kopling');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Struktur dari tabel `products`
 --
 
 CREATE TABLE `products` (
@@ -96,13 +114,21 @@ CREATE TABLE `products` (
   `type_id` int(11) NOT NULL,
   `price` int(11) NOT NULL,
   `description` text NOT NULL,
-  `pict` text NOT NULL
+  `pict` text NOT NULL,
+  `stok` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `products`
+--
+
+INSERT INTO `products` (`product_id`, `name`, `kategori_id`, `merk_id`, `type_id`, `price`, `description`, `pict`, `stok`) VALUES
+(1, 'Gear motor', 2, 1, 2, 50000, 'gear buat tawwuran', '6883032a87e0348a2532ae7673adc386.jpg', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `stocks`
+-- Struktur dari tabel `stocks`
 --
 
 CREATE TABLE `stocks` (
@@ -114,7 +140,7 @@ CREATE TABLE `stocks` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `transactions`
+-- Struktur dari tabel `transactions`
 --
 
 CREATE TABLE `transactions` (
@@ -128,7 +154,7 @@ CREATE TABLE `transactions` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `types`
+-- Struktur dari tabel `types`
 --
 
 CREATE TABLE `types` (
@@ -137,11 +163,18 @@ CREATE TABLE `types` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data untuk tabel `types`
+--
+
+INSERT INTO `types` (`type_id`, `type`) VALUES
+(2, 'honda');
+
+--
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `cart`
+-- Indeks untuk tabel `cart`
 --
 ALTER TABLE `cart`
   ADD PRIMARY KEY (`cart_id`),
@@ -149,13 +182,13 @@ ALTER TABLE `cart`
   ADD KEY `cart_ibfk_1` (`product_id`);
 
 --
--- Indexes for table `customers`
+-- Indeks untuk tabel `customers`
 --
 ALTER TABLE `customers`
   ADD PRIMARY KEY (`consumer_id`);
 
 --
--- Indexes for table `det_transaction`
+-- Indeks untuk tabel `det_transaction`
 --
 ALTER TABLE `det_transaction`
   ADD PRIMARY KEY (`id`),
@@ -163,19 +196,19 @@ ALTER TABLE `det_transaction`
   ADD KEY `product_id` (`product_id`);
 
 --
--- Indexes for table `kategori`
+-- Indeks untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`kategory_id`);
 
 --
--- Indexes for table `merks`
+-- Indeks untuk tabel `merks`
 --
 ALTER TABLE `merks`
   ADD PRIMARY KEY (`merk_id`);
 
 --
--- Indexes for table `products`
+-- Indeks untuk tabel `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`product_id`),
@@ -185,91 +218,96 @@ ALTER TABLE `products`
   ADD KEY `kategori_id` (`kategori_id`);
 
 --
--- Indexes for table `stocks`
+-- Indeks untuk tabel `stocks`
 --
 ALTER TABLE `stocks`
   ADD PRIMARY KEY (`id`),
   ADD KEY `st` (`product_id`);
 
 --
--- Indexes for table `transactions`
+-- Indeks untuk tabel `transactions`
 --
 ALTER TABLE `transactions`
   ADD PRIMARY KEY (`transaction_id`),
   ADD KEY `ts` (`consumer_id`);
 
 --
--- Indexes for table `types`
+-- Indeks untuk tabel `types`
 --
 ALTER TABLE `types`
   ADD PRIMARY KEY (`type_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `cart`
+-- AUTO_INCREMENT untuk tabel `cart`
 --
 ALTER TABLE `cart`
   MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `customers`
+-- AUTO_INCREMENT untuk tabel `customers`
 --
 ALTER TABLE `customers`
   MODIFY `consumer_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `det_transaction`
+-- AUTO_INCREMENT untuk tabel `det_transaction`
 --
 ALTER TABLE `det_transaction`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `kategori`
+-- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `kategory_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `kategory_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `merks`
+-- AUTO_INCREMENT untuk tabel `merks`
 --
 ALTER TABLE `merks`
-  MODIFY `merk_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `merk_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `stocks`
+-- AUTO_INCREMENT untuk tabel `products`
+--
+ALTER TABLE `products`
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT untuk tabel `stocks`
 --
 ALTER TABLE `stocks`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `types`
+-- AUTO_INCREMENT untuk tabel `types`
 --
 ALTER TABLE `types`
-  MODIFY `type_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `cart`
+-- Ketidakleluasaan untuk tabel `cart`
 --
 ALTER TABLE `cart`
-  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`consumer_id`) REFERENCES `customers` (`consumer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`consumer_id`) REFERENCES `customers` (`consumer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `cart_ibfk_3` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `det_transaction`
+-- Ketidakleluasaan untuk tabel `det_transaction`
 --
 ALTER TABLE `det_transaction`
-  ADD CONSTRAINT `det_transaction_ibfk_1` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`transaction_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `det_transaction_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `det_transaction_ibfk_1` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`transaction_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `products`
+-- Ketidakleluasaan untuk tabel `products`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`merk_id`) REFERENCES `merks` (`merk_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -277,13 +315,7 @@ ALTER TABLE `products`
   ADD CONSTRAINT `products_ibfk_3` FOREIGN KEY (`type_id`) REFERENCES `types` (`type_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `stocks`
---
-ALTER TABLE `stocks`
-  ADD CONSTRAINT `stocks_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `transactions`
+-- Ketidakleluasaan untuk tabel `transactions`
 --
 ALTER TABLE `transactions`
   ADD CONSTRAINT `transactions_ibfk_1` FOREIGN KEY (`consumer_id`) REFERENCES `customers` (`consumer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;

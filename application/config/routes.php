@@ -59,6 +59,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['detail-product/(:any)'] = 'Products/detail/$1'; // WITH ID
 $route['detail-product'] = 'Products/detail'; // WITHOUT ID RETURN ERROR
 $route['add-product'] = 'Products/add'; // ADD PRODUCT
+$route['list-product'] = 'Products/index'; // LIST PRODUCT
 
 
 // MERK ROUTE
