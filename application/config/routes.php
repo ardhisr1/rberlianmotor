@@ -78,3 +78,12 @@ $route['edit-type'] = 'Type/detail/'; // EDIT TYPE WITHOUT ID == RETURN FALSE
 $route['delete-type/(:any)'] = 'Type/delete/$1'; // DELETE TYPE
 $route['delete-type'] = 'Type/delete/'; // DELETE TYPE WITHOUT ID == RETURN FALSE
 $route['list-type'] = 'Type/index'; // LIST TYPE
+
+
+// TYPE ROUTE
+$route['add-category'] = 'Category/add'; // ADD CATEGORY
+$route['edit-category/(:any)'] = 'Category/detail/$1'; // EDIT CATEGORY
+$route['edit-category'] = 'Category/detail/'; // EDIT CATEGORY WITHOUT ID == RETURN FALSE
+$route['delete-category/(:any)'] = 'Category/delete/$1'; // DELETE CATEGORY
+$route['delete-category'] = 'Category/delete/'; // DELETE CATEGORY WITHOUT ID == RETURN FALSE
+$route['list-category'] = 'Category/index'; // LIST CATEGORY
