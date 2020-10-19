@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 19 Okt 2020 pada 11.00
+-- Waktu pembuatan: 19 Okt 2020 pada 11.11
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.3.0
 
@@ -128,6 +128,27 @@ INSERT INTO `products` (`product_id`, `name`, `kategori_id`, `merk_id`, `type_id
 -- --------------------------------------------------------
 
 --
+-- Stand-in struktur untuk tampilan `show_products`
+-- (Lihat di bawah untuk tampilan aktual)
+--
+CREATE TABLE `show_products` (
+`product_id` int(11)
+,`name` varchar(50)
+,`kategori_id` int(11)
+,`merk_id` int(11)
+,`type_id` int(11)
+,`price` int(11)
+,`description` text
+,`pict` text
+,`stok` int(11)
+,`merk` varchar(50)
+,`category` varchar(50)
+,`type` varchar(50)
+);
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `stocks`
 --
 
@@ -168,6 +189,15 @@ CREATE TABLE `types` (
 
 INSERT INTO `types` (`type_id`, `type`) VALUES
 (2, 'honda');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur untuk view `show_products`
+--
+DROP TABLE IF EXISTS `show_products`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `show_products`  AS  select `p`.`product_id` AS `product_id`,`p`.`name` AS `name`,`p`.`kategori_id` AS `kategori_id`,`p`.`merk_id` AS `merk_id`,`p`.`type_id` AS `type_id`,`p`.`price` AS `price`,`p`.`description` AS `description`,`p`.`pict` AS `pict`,`p`.`stok` AS `stok`,`m`.`merk` AS `merk`,`k`.`category` AS `category`,`t`.`type` AS `type` from (((`products` `p` join `merks` `m` on((`m`.`merk_id` = `p`.`merk_id`))) join `types` `t` on((`t`.`type_id` = `p`.`type_id`))) join `kategori` `k` on((`k`.`kategory_id` = `p`.`kategori_id`))) ;
 
 --
 -- Indexes for dumped tables
