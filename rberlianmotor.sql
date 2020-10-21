@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 19 Okt 2020 pada 11.11
+-- Waktu pembuatan: 20 Okt 2020 pada 16.37
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.3.0
 
@@ -77,7 +77,8 @@ CREATE TABLE `kategori` (
 --
 
 INSERT INTO `kategori` (`kategory_id`, `category`) VALUES
-(2, 'stang edit');
+(3, 'cat 1'),
+(4, 'cat 2');
 
 -- --------------------------------------------------------
 
@@ -95,10 +96,8 @@ CREATE TABLE `merks` (
 --
 
 INSERT INTO `merks` (`merk_id`, `merk`) VALUES
-(1, 'honda'),
-(2, 'suzuki'),
-(3, 'yamaha'),
-(4, 'kopling');
+(7, 'merk 1'),
+(8, 'merk 2');
 
 -- --------------------------------------------------------
 
@@ -111,7 +110,7 @@ CREATE TABLE `products` (
   `name` varchar(50) NOT NULL,
   `kategori_id` int(11) NOT NULL,
   `merk_id` int(11) NOT NULL,
-  `type_id` int(11) NOT NULL,
+  `type_id` int(11) DEFAULT NULL,
   `price` int(11) NOT NULL,
   `description` text NOT NULL,
   `pict` text NOT NULL,
@@ -123,7 +122,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `name`, `kategori_id`, `merk_id`, `type_id`, `price`, `description`, `pict`, `stok`) VALUES
-(1, 'Gear motor', 2, 1, 2, 50000, 'gear buat tawwuran', '6883032a87e0348a2532ae7673adc386.jpg', 0);
+(5, 'Gear motor edit', 3, 7, 4, 100000, 'description edit', 'ecf0637687bfc526fccaeed2e34f882f.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -188,7 +187,8 @@ CREATE TABLE `types` (
 --
 
 INSERT INTO `types` (`type_id`, `type`) VALUES
-(2, 'honda');
+(4, 'type1'),
+(5, 'type2');
 
 -- --------------------------------------------------------
 
@@ -293,19 +293,19 @@ ALTER TABLE `det_transaction`
 -- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `kategory_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `kategory_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `merks`
 --
 ALTER TABLE `merks`
-  MODIFY `merk_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `merk_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `stocks`
@@ -317,7 +317,7 @@ ALTER TABLE `stocks`
 -- AUTO_INCREMENT untuk tabel `types`
 --
 ALTER TABLE `types`
-  MODIFY `type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
@@ -327,22 +327,29 @@ ALTER TABLE `types`
 -- Ketidakleluasaan untuk tabel `cart`
 --
 ALTER TABLE `cart`
-  ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`consumer_id`) REFERENCES `customers` (`consumer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `cart_ibfk_3` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`consumer_id`) REFERENCES `customers` (`consumer_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `cart_ibfk_3` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ketidakleluasaan untuk tabel `det_transaction`
 --
 ALTER TABLE `det_transaction`
-  ADD CONSTRAINT `det_transaction_ibfk_1` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`transaction_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `det_transaction_ibfk_1` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`transaction_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `det_transaction_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ketidakleluasaan untuk tabel `products`
 --
 ALTER TABLE `products`
-  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`merk_id`) REFERENCES `merks` (`merk_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`kategori_id`) REFERENCES `kategori` (`kategory_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `products_ibfk_3` FOREIGN KEY (`type_id`) REFERENCES `types` (`type_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`kategori_id`) REFERENCES `kategori` (`kategory_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `products_ibfk_4` FOREIGN KEY (`merk_id`) REFERENCES `merks` (`merk_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `products_ibfk_5` FOREIGN KEY (`type_id`) REFERENCES `types` (`type_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ketidakleluasaan untuk tabel `stocks`
+--
+ALTER TABLE `stocks`
+  ADD CONSTRAINT `stocks_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ketidakleluasaan untuk tabel `transactions`

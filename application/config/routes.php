@@ -58,8 +58,12 @@ $route['translate_uri_dashes'] = FALSE;
 // PRODUCTS ROUTE
 $route['detail-product/(:any)'] = 'Products/detail/$1'; // WITH ID
 $route['detail-product'] = 'Products/detail'; // WITHOUT ID RETURN ERROR
+$route['edit-product/(:any)'] = 'Products/edit/$1'; // WITH ID
+$route['edit-product'] = 'Products/edit'; // WITHOUT ID RETURN ERROR
 $route['add-product'] = 'Products/add'; // ADD PRODUCT
 $route['list-product'] = 'Products/index'; // LIST PRODUCT
+$route['delete-product/(:any)'] = 'Products/delete/$1'; // DELETE Product
+$route['delete-product'] = 'Products/delete/'; // DELETE Product WITHOUT ID == RETURN FALSE
 
 
 // MERK ROUTE

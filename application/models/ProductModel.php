@@ -4,7 +4,7 @@ class ProductModel extends CI_Model
 {
     public function listProduct()
     {
-        return $this->db->get('products')->result_array();
+        return $this->db->get('show_products')->result_array();
     }
     public function addProduct($data)
     {
@@ -13,17 +13,17 @@ class ProductModel extends CI_Model
 
     public function detailProduct($id)
     {
-        return $this->db->get_where('kategori', ['kategory_id' => $id])->row_array();
+        return $this->db->get_where('show_products', ['product_id' => $id])->row_array();
     }
 
     public function editProduct($id, $data)
     {
-        $this->db->where('kategory_id', $id);
-        $this->db->update('kategori', $data);
+        $this->db->where('product_id', $id);
+        $this->db->update('products', $data);
     }
 
     public function deleteProduct($id){
-        $this->db->where('kategory_id', $id);
-        return $this->db->delete('kategori');
+        $this->db->where('product_id', $id);
+        return $this->db->delete('products');
     }
 }
