@@ -22,8 +22,11 @@ class Category extends CI_Controller
         $data = [
             'categories' => $this->Model->listCategory()
         ];
-
+        
+        $this->load->view('admin/header');
+        $this->load->view('admin/aside');
         $this->load->view('category/category', $data);
+        $this->load->view('admin/footer');
     }
 
     public function add()

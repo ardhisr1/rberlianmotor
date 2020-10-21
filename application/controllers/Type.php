@@ -23,7 +23,10 @@ class Type extends CI_Controller
             'types' => $this->Model->listType()
         ];
 
+        $this->load->view('admin/header');
+        $this->load->view('admin/aside');
         $this->load->view('type/type', $data);
+        $this->load->view('admin/footer');
     }
 
     public function add()

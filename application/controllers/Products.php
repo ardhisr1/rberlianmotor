@@ -80,8 +80,10 @@ class Products extends CI_Controller
         $data = [
             'products' => $this->Model->listProduct()
         ];
-
+        $this->load->view('admin/header');
+        $this->load->view('admin/aside');
         $this->load->view('products/product', $data);
+        $this->load->view('admin/footer');
     }
 
     public function add()

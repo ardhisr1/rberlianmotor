@@ -23,7 +23,10 @@ class Merk extends CI_Controller
             'merks' => $this->Model->listMerk()
         ];
 
+        $this->load->view('admin/header');
+        $this->load->view('admin/aside');
         $this->load->view('merk/merk', $data);
+        $this->load->view('admin/footer');
     }
 
     public function add()

@@ -1,14 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Manajemen Produk</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Manajemen Produk</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List Product</title>
-</head>
 
-<body>
-    <h1>List Product</h1>
+<!-- Main content -->
+<section class="content">
     <a href="<?= base_url('add-product') ?>">Add product</a>
     <table border="1">
         <tr>
@@ -41,6 +53,4 @@
             </tr>
         <?php endforeach; ?>
     </table>
-</body>
-
-</html>
+</section>
