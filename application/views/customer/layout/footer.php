@@ -49,20 +49,22 @@
 								<ul class="footer-links">
 									<li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
 									<li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
-									<li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
+									<li><a href="#"><i class="fa fa-envelope-o"></i>rberlianmotor@gmail.com</a></li>
 								</ul>
 							</div>
 						</div>
 
 						<div class="col-md-3 col-xs-6">
 							<div class="footer">
-								<h3 class="footer-title">Kategori</h3>
+								<h3 class="footer-title">Pembayaran</h3>
 								<ul class="footer-links">
-									<li><a href="#">Promo</a></li>
-									<li><a href="#">Kategori</a></li>
-									<li><a href="#">Suku-Cadang</a></li>
-									
-								</ul>
+									<li><a href="#">BCA Rek. 012390192301 A.n </a></li>
+									<li><a href="#">BNI Rek. 000930129012 A.n </a></li>
+								</ul><br>
+								<p>Cash On Delivery (COD)</p>
+								<P>Khusus daerah</P>
+								<p>JAKARTA DEPOK TANGERANG BEKASI minimal order 3jt</p>
+								<p>KARAWANG BOGOR PURWAKARTA SUKABUMI minimal order 4jt</p>
 							</div>
 						</div>
 
@@ -106,12 +108,8 @@
 					<div class="row">
 						<div class="col-md-12 text-center">
 							<ul class="footer-payments">
-								<li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
-								<li><a href="#"><i class="fa fa-credit-card"></i></a></li>
-								<li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
-								<li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
-								<li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
-								<li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+								<li><img src="<?= base_url(); ?>assets/electro/img/bca.svg" alt="bca" width="60" height="60"></li>
+								<li><img src="<?= base_url(); ?>assets/electro/img/bni.svg" alt="bni" width="60" height="60"></li>								
 							</ul>
 							<span class="copyright">
 								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->

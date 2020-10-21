@@ -88,3 +88,6 @@ $route['edit-category'] = 'Category/detail/'; // EDIT CATEGORY WITHOUT ID == RET
 $route['delete-category/(:any)'] = 'Category/delete/$1'; // DELETE CATEGORY
 $route['delete-category'] = 'Category/delete/'; // DELETE CATEGORY WITHOUT ID == RETURN FALSE
 $route['list-category'] = 'Category/index'; // LIST CATEGORY
+
+//test dashboard nanti edit aja
+$route['admin-dashboard'] = 'Dashboard/index'; // ADD CATEGORY

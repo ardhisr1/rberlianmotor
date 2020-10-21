@@ -9,7 +9,7 @@
 						<li class="active"><a href="<?= base_url()?>">Home</a></li>
 						<li><a href="<?= base_url() ?>Promo">Promo</a></li>
 						<li><a href="<?= base_url() ?>Kategori">Kategori</a></li>
-						<li><a href="<?= base_url() ?>suku_cadang">Suku-Cadang</a></li>
+						<li><a href="<?= base_url() ?>list-products">Suku-Cadang</a></li>
 						
 					</ul>
 					<!-- /NAV -->
