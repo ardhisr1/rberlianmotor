@@ -94,4 +94,4 @@ $route['delete-category'] = 'Category/delete/'; // DELETE CATEGORY WITHOUT ID ==
 $route['list-category'] = 'Category/index'; // LIST CATEGORY
 
 //test dashboard nanti edit aja
-$route['admin-dashboard'] = 'Dashboard/index'; // ADD CATEGORY
+$route['admin-dashboard'] = 'Dashboard/index'; // DASHBOARD ADMIN

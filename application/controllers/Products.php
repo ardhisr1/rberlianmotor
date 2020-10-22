@@ -96,7 +96,10 @@ class Products extends CI_Controller
                 'merk' => $this->Merk->listMerk(),
                 'type' => $this->Type->listType(),
             ];
+            $this->load->view('admin/header');
+            $this->load->view('admin/aside');
             $this->load->view('products/add', $data);
+            $this->load->view('admin/footer');
         } else {
             $data = $this->setData();
             $this->Model->addProduct($data);
@@ -138,7 +141,10 @@ class Products extends CI_Controller
                     'merk' => $this->Merk->listMerk(),
                     'type' => $this->Type->listType(),
                 ];
+                $this->load->view('admin/header');
+                $this->load->view('admin/aside');
                 $this->load->view('products/edit', $data);
+                $this->load->view('admin/footer');
             } else {
                 redirect('list-product');
             }
