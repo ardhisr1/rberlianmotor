@@ -34,7 +34,10 @@ class Category extends CI_Controller
         $validate = $this->validate();
 
         if (!$validate) {
+            $this->load->view('admin/header');
+            $this->load->view('admin/aside');
             $this->load->view('category/add');
+            $this->load->view('admin/footer');
         } else {
             $category = $this->input->post('category');
             $data = [
@@ -55,7 +58,11 @@ class Category extends CI_Controller
             $check = $this->Model->detailCategory($id);
             if ($check) {
                 $data = ['category' => $check];
+                
+                $this->load->view('admin/header');
+                $this->load->view('admin/aside');
                 $this->load->view('category/edit', $data);
+                $this->load->view('admin/footer');
             } else {
                 redirect('list-category');
             }

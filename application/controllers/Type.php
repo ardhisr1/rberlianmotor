@@ -34,7 +34,12 @@ class Type extends CI_Controller
         $validate = $this->validate();
 
         if (!$validate) {
+     
+            $this->load->view('admin/header');
+            $this->load->view('admin/aside');
             $this->load->view('type/add');
+            $this->load->view('admin/footer');
+
         } else {
             $type = $this->input->post('type');
             $data = [
@@ -55,7 +60,11 @@ class Type extends CI_Controller
             $check = $this->Model->detailType($id);
             if ($check) {
                 $data = ['type' => $check];
+                
+                $this->load->view('admin/header');
+                $this->load->view('admin/aside');
                 $this->load->view('type/edit', $data);
+                $this->load->view('admin/footer');
             } else {
                 redirect('list-type');
             }

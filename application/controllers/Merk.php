@@ -34,14 +34,21 @@ class Merk extends CI_Controller
         $validate = $this->validate();
 
         if (!$validate) {
+            $this->load->view('admin/header');
+            $this->load->view('admin/aside');
             $this->load->view('merk/add');
+            $this->load->view('admin/footer');
+
         } else {
             $merk = $this->input->post('merk');
             $data = [
                 "merk" => $merk
             ];
 
+            $this->load->view('admin/header');
+            $this->load->view('admin/aside');
             $this->Model->addMerk($data);
+            $this->load->view('admin/footer');
             redirect('list-merk');
         }
     }
@@ -55,7 +62,11 @@ class Merk extends CI_Controller
             $check = $this->Model->detailMerk($id);
             if ($check) {
                 $data = ['merk' => $check];
+                
+                $this->load->view('admin/header');
+                $this->load->view('admin/aside');
                 $this->load->view('merk/edit', $data);
+                $this->load->view('admin/footer');
             } else {
                 redirect('list-merk');
             }
@@ -75,7 +86,7 @@ class Merk extends CI_Controller
                 $data = [
                     'merk' => $this->input->post('merk')
                 ];
-
+                
                 $this->Model->editMerk($id, $data);
                 redirect('list-merk');
             }
