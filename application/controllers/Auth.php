@@ -56,14 +56,13 @@ class Auth extends CI_Controller
                     echo 'login success';
                 }else{
                     // Password wrong
-                    redirect('auth/login');
+                    echo 'password wrong';
+                    // redirect('auth/login');
                 }
             }else{
                 // Email is not registered
                 redirect('auth/login');
             }
-            // $this->Model->registerUser($data);
-            // redirect('auth/login');
         }
     }
 
