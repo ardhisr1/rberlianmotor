@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 20 Okt 2020 pada 16.37
+-- Waktu pembuatan: 25 Okt 2020 pada 07.26
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.3.0
 
@@ -21,6 +21,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `rberlianmotor`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `admin`
+--
+
+CREATE TABLE `admin` (
+  `admin_id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `admin`
+--
+
+INSERT INTO `admin` (`admin_id`, `name`, `email`, `password`) VALUES
+(1, 'admin1', 'prioariefgunawangunawan@gmail.com', '$2y$10$2IUbTHVzzuAkCrPAuJjQwulLG6xQ0.BkcZAT/NWm5/unF1WpjI3d2');
 
 -- --------------------------------------------------------
 
@@ -47,6 +67,13 @@ CREATE TABLE `customers` (
   `email` varchar(50) NOT NULL,
   `password` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `customers`
+--
+
+INSERT INTO `customers` (`consumer_id`, `name`, `email`, `password`) VALUES
+(1, 'Prio Arief Gunawan', 'prioariefgunawangunawan@gmail.com', '$2y$10$mnR4eKJHI1oXsHS0tDh9w.TsBqpb4SWRtuWra2KKzGHcPBfvzbL.G');
 
 -- --------------------------------------------------------
 
@@ -122,7 +149,8 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `name`, `kategori_id`, `merk_id`, `type_id`, `price`, `description`, `pict`, `stok`) VALUES
-(5, 'Gear motor edit', 3, 7, 4, 100000, 'description edit', 'ecf0637687bfc526fccaeed2e34f882f.jpg', 0);
+(5, 'Gear motor edit', 3, 7, 4, 100000, 'description edit', 'ecf0637687bfc526fccaeed2e34f882f.jpg', 0),
+(6, 'Gear motor edit', 3, 7, 4, 100000, 'description edit edit', '4f84c417a066f9fb547da1b85ef58d78.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -204,6 +232,12 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 
 --
+-- Indeks untuk tabel `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`admin_id`);
+
+--
 -- Indeks untuk tabel `cart`
 --
 ALTER TABLE `cart`
@@ -272,6 +306,12 @@ ALTER TABLE `types`
 --
 
 --
+-- AUTO_INCREMENT untuk tabel `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT untuk tabel `cart`
 --
 ALTER TABLE `cart`
@@ -281,7 +321,7 @@ ALTER TABLE `cart`
 -- AUTO_INCREMENT untuk tabel `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `consumer_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `consumer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `det_transaction`
@@ -305,7 +345,7 @@ ALTER TABLE `merks`
 -- AUTO_INCREMENT untuk tabel `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `stocks`
