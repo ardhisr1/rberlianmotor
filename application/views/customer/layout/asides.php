@@ -8,8 +8,9 @@
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
 						<li ><a href="<?= base_url() ?>">Home</a></li>
-						<li><a href="<?= base_url() ?>Promo">Promo</a></li>
-						<li><a href="<?= base_url() ?>Kategori">Kategori</a></li>
+						<li><a href="<?= base_url() ?>Promo">Kategori</a></li>
+						<li><a href="<?= base_url() ?>Kategori">Brands</a></li>
+						<li><a href="<?= base_url() ?>TipeKendaraan">Tipe Kendaraan</a></li>
 						<li class="active"><a href="<?= base_url() ?>suku_cadang">Suku-Cadang</a></li>
 						
 					</ul>

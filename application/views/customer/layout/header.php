@@ -63,7 +63,7 @@
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-								<a href="#" class="logo">
+								<a href="<?= base_url(); ?>" class="logo">
 									<img src="<?= base_url(); ?>assets/electro/img/logo.png" alt="">
 								</a>
 							</div>
