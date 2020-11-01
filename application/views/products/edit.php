@@ -35,7 +35,7 @@
             <!-- /.card-header -->
 
               <!-- form start -->
-            <form role="form" action="<?= base_url('add-product') ?>" method="post" enctype="multipart/form-data">
+            <form role="form" method="post" enctype="multipart/form-data">
               <div class="card-body">
 
                 <!-- Name -->
@@ -126,7 +126,7 @@
                 <!-- /.card-body -->
 
               <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Tambah Produk</button>
+                <button type="submit" class="btn btn-primary">Edit Produk</button>
               </div>
             </form>
           </div>

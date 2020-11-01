@@ -95,9 +95,14 @@ $route['delete-category'] = 'Category/delete/'; // DELETE CATEGORY WITHOUT ID ==
 $route['list-category'] = 'Category/index'; // LIST CATEGORY
 
 
-// USER ROUTE
+// AUTH USER ROUTE
 $route['auth/login'] = 'Auth/index'; // LOGIN USER
 $route['auth/register'] = 'Auth/register'; // REGISTER USER
+
+
+// AUTH ADMIN ROUTE
+$route['auth/login-admin'] = 'Auth/loginAdmin'; // LOGIN ADMIN
+$route['auth/add-admin'] = 'Auth/addAdmin'; // REGISTER ADMIN
 
 //test dashboard nanti edit aja
 $route['admin-dashboard'] = 'Dashboard/index'; // DASHBOARD ADMIN
