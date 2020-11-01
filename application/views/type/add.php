@@ -13,7 +13,7 @@
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="<?= base_url() ?>admin-dashboard">Home</a></li>
             <li class="breadcrumb-item"><a href="<?= base_url() ?>list-type">Manajemen Tipe Kendaraan</a></li>
-            <li class="breadcrumb-item active">Tambah Tipe Kendaraan/li>
+            <li class="breadcrumb-item active">Tambah Tipe Kendaraan</li>
           </ol>
         </div><!-- /.col -->
       </div><!-- /.row -->
@@ -41,7 +41,7 @@
 
                 <!-- Type -->
                 <div class="form-group">
-                  <label for="Type">Nama Katagori</label>
+                  <label for="Type">Tipe Kendaraan</label>
                     <input type="text" class="form-control" name="type" placeholder="Tipe Kendaraan">
                     <span><?= form_error('type') ?></span>
                 </div>

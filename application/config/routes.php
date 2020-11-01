@@ -53,7 +53,8 @@ $route['default_controller'] = 'Landing';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-
+//Request Route Style
+//$route['']
 
 // PRODUCTS ROUTE
 $route['detail-product/(:any)'] = 'Products/detail/$1'; // WITH ID

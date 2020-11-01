@@ -48,7 +48,7 @@
 					</ul>
 					<ul class="header-links pull-right">
 						<li><a href="#"><i class="fa fa-rupiah"></i> Rupiah</a></li>
-						<li><a href="<?= base_url() ?>login"><i class="fa fa-user-o"></i> Akun Anda</a></li>
+						<li><a href="<?= base_url() ?>auth/login"><i class="fa fa-user-o"></i> Akun Anda</a></li>
 					</ul>
 				</div>
 			</div>
@@ -99,7 +99,7 @@
 							<div class="header-ctn">
 								<!-- Wishlist -->
 								<div>
-									<a href="#">
+									<a href="<?= base_url() ?>auth/login">
 										<i class="fa fa-heart-o"></i>
 										<span>Your Wishlist</span>
 										<div class="qty">2</div>
@@ -144,7 +144,7 @@
 										</div>
 										<div class="cart-btns">
 											<a href="#">View Cart</a>
-											<a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+											<a href="<?= base_url() ?>auth/login">Checkout <i class="fa fa-arrow-circle-right"></i></a>
 										</div>
 									</div>
 								</div>

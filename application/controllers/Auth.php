@@ -46,7 +46,9 @@ class Auth extends CI_Controller
     {
         $validation = $this->validate(true);
         if (!$validation) {
+            $this->load->view('customer/layout/header');
             $this->load->view('auth-user/login');
+            $this->load->view('customer/layout/footer');
         } else {
             $data = $this->setData(true);
             $emailCheck = $this->Model->getUserByEmail($data['email']);
@@ -71,7 +73,9 @@ class Auth extends CI_Controller
     {
         $validation = $this->validate();
         if (!$validation) {
+            $this->load->view('customer/layout/header');
             $this->load->view('auth-user/register');
+            $this->load->view('customer/layout/footer');
         } else {
             $data = $this->setData();
             $this->Model->registerUser($data);
