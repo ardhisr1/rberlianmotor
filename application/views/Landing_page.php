@@ -84,10 +84,11 @@
 					<!-- section title -->
 					<div class="col-md-12">
 						<div class="section-title">
-							<h3 class="title">Produk Terbarru</h3>
+							<h3 class="title">Produk Terbaru</h3>
 							<div class="section-nav">
 								<ul class="section-tab-nav tab-nav">
-									<li class="active"><a data-toggle="tab" href="#tab1"></a></li>								</ul>
+									<li class="active"><a data-toggle="tab" href="#tab1"></a></li>
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -103,7 +104,6 @@
 									<?php foreach ($products as $product) : ?>
 										<!-- product -->
 										<div class="product">
-										
 											<div class="product-img">
 												<img src="<?= base_url('assets/product-image/') . $product['pict'] ?>" alt="">
 											</div>
@@ -111,15 +111,6 @@
 												<p class="product-category"><?= $product['category'] ?></p>
 												<h3 class="product-name"><a href="#"><?= $product['name'] ?></a></h3>
 												<h4 class="product-price"><?= number_format($product['price']) ?><del class="product-old-price"></del></h4>
-											<!--
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-												</div>
-											-->
 												<div class="product-btns">
 													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
 													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>

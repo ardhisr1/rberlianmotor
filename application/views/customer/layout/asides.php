@@ -8,11 +8,10 @@
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
 						<li ><a href="<?= base_url() ?>">Home</a></li>
-						<li><a href="<?= base_url() ?>Promo">Kategori</a></li>
-						<li><a href="<?= base_url() ?>Kategori">Brands</a></li>
-						<li><a href="<?= base_url() ?>TipeKendaraan">Tipe Kendaraan</a></li>
-						<li class="active"><a href="<?= base_url() ?>suku_cadang">Suku-Cadang</a></li>
-						
+						<li><a href="<?= base_url() ?>kategori">Kategori</a></li>
+						<li><a href="<?= base_url() ?>merk">Brands</a></li>
+						<li><a href="<?= base_url() ?>tipe-kendaraan">Tipe Kendaraan</a></li>
+						<li class="active"><a href="<?= base_url() ?>jual-beli-sparepart-motor/jual-harga-distributor">Suku-Cadang</a></li>
 					</ul>
 					<!-- /NAV -->
 				</div>
@@ -31,9 +30,7 @@
 					<div class="col-md-12">
 						<ul class="breadcrumb-tree">
 							<li><a href="<?= base_url() ?>">Home</a></li>
-							<li><a href="#">All Categories</a></li>
-							<li><a href="#">Accessories</a></li>
-							<li class="active">Headphones (227,490 Results)</li>
+							<li><a href="#">Suku Cadang</a></li>
 						</ul>
 					</div>
 				</div>
@@ -53,7 +50,7 @@
 					<div id="aside" class="col-md-3">
 						<!-- aside Widget -->
 						<div class="aside">
-							<h3 class="aside-title">Categories</h3>
+							<h3 class="aside-title">Kategori</h3>
 							<div class="checkbox-filter">
 
 								<div class="input-checkbox">
@@ -115,7 +112,7 @@
 
 						<!-- aside Widget -->
 						<div class="aside">
-							<h3 class="aside-title">Price</h3>
+							<h3 class="aside-title">Harga</h3>
 							<div class="price-filter">
 								<div id="price-slider"></div>
 								<div class="input-number price-min">
@@ -135,7 +132,7 @@
 
 						<!-- aside Widget -->
 						<div class="aside">
-							<h3 class="aside-title">Brand</h3>
+							<h3 class="aside-title">Merek</h3>
 							<div class="checkbox-filter">
 								<div class="input-checkbox">
 									<input type="checkbox" id="brand-1">
@@ -191,7 +188,7 @@
 
 						<!-- aside Widget -->
 						<div class="aside">
-							<h3 class="aside-title">Top selling</h3>
+							<h3 class="aside-title">Rekomendasi</h3>
 							<div class="product-widget">
 								<div class="product-img">
 									<img src="<?= base_url(); ?>assets/electro/img/product01.png" alt="">
