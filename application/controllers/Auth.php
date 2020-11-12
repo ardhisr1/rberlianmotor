@@ -60,7 +60,8 @@ class Auth extends CI_Controller
             if ($emailCheck) {
                 $passwordHash = $emailCheck['password'];
                 if(password_verify($data['password'], $passwordHash)){
-                    echo 'login success';
+                    redirect('profile');
+
                 }else{
                     // Password wrong
                     echo 'password wrong';
@@ -99,6 +100,7 @@ class Auth extends CI_Controller
                 $passwordHash = $emailCheck['password'];
                 if(password_verify($data['password'], $passwordHash)){
                     echo 'login success';
+                    redirect('admin-dashboard');
                 }else{
                     // Password wrong
                     echo 'password wrong';

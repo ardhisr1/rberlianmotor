@@ -9,7 +9,7 @@
 					<ul class="main-nav nav navbar-nav">
 						<li ><a href="<?= base_url() ?>">Home</a></li>
 						<li><a href="<?= base_url() ?>kategori">Kategori</a></li>
-						<li><a href="<?= base_url() ?>merk">Brands</a></li>
+						<li><a href="<?= base_url() ?>merk">Merek</a></li>
 						<li><a href="<?= base_url() ?>tipe-kendaraan">Tipe Kendaraan</a></li>
 						<li class="active"><a href="<?= base_url() ?>jual-beli-sparepart-motor/jual-harga-distributor">Suku-Cadang</a></li>
 					</ul>
@@ -28,6 +28,7 @@
 				<!-- row -->
 				<div class="row">
 					<div class="col-md-12">
+					<h3 class="breadcrumb-header">Daftar Suku Cadang</h3>
 						<ul class="breadcrumb-tree">
 							<li><a href="<?= base_url() ?>">Home</a></li>
 							<li><a href="#">Suku Cadang</a></li>
@@ -52,80 +53,16 @@
 						<div class="aside">
 							<h3 class="aside-title">Kategori</h3>
 							<div class="checkbox-filter">
-
+								<?php foreach ($categories as $category) : ?>
 								<div class="input-checkbox">
 									<input type="checkbox" id="category-1">
 									<label for="category-1">
 										<span></span>
-										Laptops
+										<?= $category['category'] ?>
 										<small>(120)</small>
 									</label>
 								</div>
-
-								<div class="input-checkbox">
-									<input type="checkbox" id="category-2">
-									<label for="category-2">
-										<span></span>
-										Smartphones
-										<small>(740)</small>
-									</label>
-								</div>
-
-								<div class="input-checkbox">
-									<input type="checkbox" id="category-3">
-									<label for="category-3">
-										<span></span>
-										Cameras
-										<small>(1450)</small>
-									</label>
-								</div>
-
-								<div class="input-checkbox">
-									<input type="checkbox" id="category-4">
-									<label for="category-4">
-										<span></span>
-										Accessories
-										<small>(578)</small>
-									</label>
-								</div>
-
-								<div class="input-checkbox">
-									<input type="checkbox" id="category-5">
-									<label for="category-5">
-										<span></span>
-										Laptops
-										<small>(120)</small>
-									</label>
-								</div>
-
-								<div class="input-checkbox">
-									<input type="checkbox" id="category-6">
-									<label for="category-6">
-										<span></span>
-										Smartphones
-										<small>(740)</small>
-									</label>
-								</div>
-							</div>
-						</div>
-						<!-- /aside Widget -->
-
-						<!-- aside Widget -->
-						<div class="aside">
-							<h3 class="aside-title">Harga</h3>
-							<div class="price-filter">
-								<div id="price-slider"></div>
-								<div class="input-number price-min">
-									<input id="price-min" type="number">
-									<span class="qty-up">+</span>
-									<span class="qty-down">-</span>
-								</div>
-								<span>-</span>
-								<div class="input-number price-max">
-									<input id="price-max" type="number">
-									<span class="qty-up">+</span>
-									<span class="qty-down">-</span>
-								</div>
+								<?php endforeach; ?>
 							</div>
 						</div>
 						<!-- /aside Widget -->
@@ -134,54 +71,16 @@
 						<div class="aside">
 							<h3 class="aside-title">Merek</h3>
 							<div class="checkbox-filter">
+							<?php foreach ($merks as $merk) : ?>
 								<div class="input-checkbox">
 									<input type="checkbox" id="brand-1">
 									<label for="brand-1">
 										<span></span>
-										SAMSUNG
+										<?= $merk['merk'] ?>
 										<small>(578)</small>
 									</label>
 								</div>
-								<div class="input-checkbox">
-									<input type="checkbox" id="brand-2">
-									<label for="brand-2">
-										<span></span>
-										LG
-										<small>(125)</small>
-									</label>
-								</div>
-								<div class="input-checkbox">
-									<input type="checkbox" id="brand-3">
-									<label for="brand-3">
-										<span></span>
-										SONY
-										<small>(755)</small>
-									</label>
-								</div>
-								<div class="input-checkbox">
-									<input type="checkbox" id="brand-4">
-									<label for="brand-4">
-										<span></span>
-										SAMSUNG
-										<small>(578)</small>
-									</label>
-								</div>
-								<div class="input-checkbox">
-									<input type="checkbox" id="brand-5">
-									<label for="brand-5">
-										<span></span>
-										LG
-										<small>(125)</small>
-									</label>
-								</div>
-								<div class="input-checkbox">
-									<input type="checkbox" id="brand-6">
-									<label for="brand-6">
-										<span></span>
-										SONY
-										<small>(755)</small>
-									</label>
-								</div>
+							<?php endforeach; ?>
 							</div>
 						</div>
 						<!-- /aside Widget -->

@@ -1,16 +1,17 @@
-        <!-- NAVIGATION -->
-        <nav id="navigation">
+
+		<!-- NAVIGATION -->
+		<nav id="navigation">
 			<!-- container -->
 			<div class="container">
 				<!-- responsive-nav -->
 				<div id="responsive-nav">
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
-						<li class="active"><a href="<?= base_url() ?>">Home</a></li>
-						<li><a href="<?= base_url() ?>">Kategori</a></li>
-						<li><a href="<?= base_url() ?>">Merek</a></li>
-						<li><a href="<?= base_url() ?>">Tipe Kendaraan</a></li>
-						<li><a href="<?= base_url() ?>suku_cadang">Suku-Cadang</a></li>
+						<li ><a href="<?= base_url() ?>">Home</a></li>
+						<li ><a href="<?= base_url() ?>kategori">Kategori</a></li>
+						<li ><a href="<?= base_url() ?>merk">Merek</a></li>
+						<li class="active"><a href="<?= base_url() ?>tipe-kendaraan">Tipe Kendaraan</a></li>
+						<li><a href="<?= base_url() ?>jual-beli-sparepart-motor/jual-harga-distributor">Suku-Cadang</a></li>
 					</ul>
 					<!-- /NAV -->
 				</div>
@@ -19,3 +20,46 @@
 			<!-- /container -->
 		</nav>
 		<!-- /NAVIGATION -->
+
+		
+
+				<!-- BREADCRUMB -->
+				<div id="breadcrumb" class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+						<h3 class="breadcrumb-header">Tipe Kendaraan</h3>
+						<ul class="breadcrumb-tree">
+							<li><a href="<?= base_url() ?>">Home</a></li>
+							<li class="active">Tipe Kendaraan</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /BREADCRUMB -->
+
+		<!-- SECTION -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div class="list-group">
+					<?php foreach ($types as $type) : ?>
+						<a href="#" class="list-group-item list-group-item-action"><?= $type['type'] ?></a>
+					<?php endforeach; ?>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /SECTION -->
+
+		
+

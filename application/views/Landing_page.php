@@ -7,10 +7,10 @@
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
 						<li class="active"><a href="<?= base_url() ?>">Home</a></li>
-						<li><a href="<?= base_url() ?>">Kategori</a></li>
-						<li><a href="<?= base_url() ?>">Merek</a></li>
-						<li><a href="<?= base_url() ?>">Tipe Kendaraan</a></li>
-						<li><a href="<?= base_url() ?>suku_cadang">Suku-Cadang</a></li>
+						<li><a href="<?= base_url() ?>kategori">Kategori</a></li>
+						<li><a href="<?= base_url() ?>merk">Merek</a></li>
+						<li><a href="<?= base_url() ?>tipe-kendaraan">Tipe Kendaraan</a></li>
+						<li><a href="<?= base_url() ?>jual-beli-sparepart-motor/jual-harga-distributor">Suku-Cadang</a></li>
 					</ul>
 					<!-- /NAV -->
 				</div>
@@ -105,7 +105,7 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="<?= base_url('assets/product-image/') . $product['pict'] ?>" alt="">
+												<img src="<?= base_url('assets/product-image/') . $product['pict'] ?>" width="150px" height="160px"  alt="Gambar Produk">
 											</div>
 											<div class="product-body">
 												<p class="product-category"><?= $product['category'] ?></p>
@@ -193,15 +193,7 @@
 					<!-- section title -->
 					<div class="col-md-12">
 						<div class="section-title">
-							<h3 class="title">Top selling</h3>
-							<div class="section-nav">
-								<ul class="section-tab-nav tab-nav">
-									<li class="active"><a data-toggle="tab" href="#tab2">Laptops</a></li>
-									<li><a data-toggle="tab" href="#tab2">Smartphones</a></li>
-									<li><a data-toggle="tab" href="#tab2">Cameras</a></li>
-									<li><a data-toggle="tab" href="#tab2">Accessories</a></li>
-								</ul>
-							</div>
+							<h3 class="title">Rekomendasi</h3>
 						</div>
 					</div>
 					<!-- /section title -->

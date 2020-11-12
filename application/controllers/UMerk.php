@@ -22,9 +22,9 @@ class UMerk extends CI_Controller
         $data = [
             'merks' => $this->Model->listMerk()
         ];
-
-        $this->load->view('customer/layout/header');
-        $this->load->view('customer/layout/asides');
+	
+		$this->load->view('customer/layout/header', $data);
+       // $this->load->view('customer/layout/asides');
         $this->load->view('customer/merk', $data);
         $this->load->view('customer/layout/footer');
     }

@@ -58,7 +58,8 @@ $route['translate_uri_dashes'] = FALSE;
 $route['jual-beli-sparepart-motor/jual-harga-distributor']  = 'Suku_Cadang/index';
 $route['kategori']  = 'UCategory/index';
 $route['tipe-kendaraan']  = 'UTipe/index';
-$route['Merk']  = 'UMerk/index';
+$route['merk']  = 'UMerk/index';
+$route['profile'] = 'Profile/index';
 
 
 // PRODUCTS ROUTE
@@ -74,7 +75,8 @@ $route['delete-product'] = 'admin/Products/delete/'; // DELETE Product WITHOUT I
 
 // MERK ROUTE
 $route['add-merk'] = 'admin/Merk/add'; // ADD MERK
-$route['edit-merk/(:any)'] = 'admin/Merk/detail/$1'; // EDIT MERK
+$route['edit-merk/(:any)'] = 'admin/Merk/detail/$1'; // DETAIL EDIT MERK
+$route['edited-merk/(:any)'] = 'admin/Merk/edit/$1'; // EDIT MERK
 $route['edit-merk'] = 'admin/Merk/detail/'; // EDIT MERK WITHOUT ID == RETURN FALSE
 $route['delete-merk/(:any)'] = 'admin/Merk/delete/$1'; // DELETE MERK
 $route['delete-merk'] = 'admin/Merk/delete/'; // DELETE MERK WITHOUT ID == RETURN FALSE
@@ -85,6 +87,7 @@ $route['list-merk'] = 'admin/Merk/index'; // LIST MERK
 // TYPE ROUTE
 $route['add-type'] = 'admin/Type/add'; // ADD TYPE
 $route['edit-type/(:any)'] = 'admin/Type/detail/$1'; // EDIT TYPE
+$route['edited-type/(:any)'] = 'admin/Type/edit/$1'; // EDIT MERK
 $route['edit-type'] = 'admin/Type/detail/'; // EDIT TYPE WITHOUT ID == RETURN FALSE
 $route['delete-type/(:any)'] = 'admin/Type/delete/$1'; // DELETE TYPE
 $route['delete-type'] = 'admin/Type/delete/'; // DELETE TYPE WITHOUT ID == RETURN FALSE
@@ -93,7 +96,8 @@ $route['list-type'] = 'admin/Type/index'; // LIST TYPE
 
 // CATEGORY ROUTE
 $route['add-category'] = 'admin/Category/add'; // ADD CATEGORY
-$route['edit-category/(:any)'] = 'admin/Category/detail/$1'; // EDIT CATEGORY
+$route['edit-category/(:any)'] = 'admin/Category/detail/$1'; // EDIT 
+$route['edited-category/(:any)'] = 'admin/Category/edit/$1'; // EDIT MERK
 $route['edit-category'] = 'admin/Category/detail/'; // EDIT CATEGORY WITHOUT ID == RETURN FALSE
 $route['delete-category/(:any)'] = 'admin/Category/delete/$1'; // DELETE CATEGORY
 $route['delete-category'] = 'admin/Category/delete/'; // DELETE CATEGORY WITHOUT ID == RETURN FALSE

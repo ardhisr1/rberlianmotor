@@ -7,6 +7,7 @@ class UTipe extends CI_Controller
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model('TypeModel', 'Model');
+        $this->load->model('MerkModel', 'Merk');
     }
 
     function validate()
@@ -23,8 +24,12 @@ class UTipe extends CI_Controller
             'types' => $this->Model->listType()
         ];
 
-        $this->load->view('customer/layout/header');
-        $this->load->view('customer/layout/asides');
+        $data3 = [
+			'merks' => $this->Merk->listMerk()
+		];
+	
+		$this->load->view('customer/layout/header', $data3);
+        //$this->load->view('customer/layout/asides');
         $this->load->view('customer/type', $data);
         $this->load->view('customer/layout/footer');
     }

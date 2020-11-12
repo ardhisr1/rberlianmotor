@@ -35,7 +35,7 @@
             <!-- /.card-header -->
 
               <!-- form start -->
-            <form role="form" action="<?= base_url('Category/Edit/'. $category['kategory_id']) ?>" method="post" enctype="multipart/form-data">
+            <form role="form" action="<?= base_url('edited-category/'. $category['kategory_id']) ?>" method="post" enctype="multipart/form-data">
               <div class="card-body">
 
                 <!-- Category -->

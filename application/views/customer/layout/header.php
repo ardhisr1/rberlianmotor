@@ -6,7 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>rBerlian Motor | </title>
+		<title>rBerlian Motor | Jual Beli Sparepart Motor Berkualitas</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="robots" content="index,follow" >
 
  		<!-- Google font -->
  		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -44,7 +47,7 @@
 					<ul class="header-links pull-left">
 						<li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
 						<li><a href="#"><i class="fa fa-envelope-o"></i> rberlianmotor@gmail.com</a></li>
-						<li><a href="#"><i class="fa fa-map-marker"></i> </a></li>
+						<li><a href="#"><i class="fa fa-map-marker"></i> Tangerang Selatan, Banten </a></li>
 					</ul>
 					<ul class="header-links pull-right">
 						<li><a href="#"><i class="fa fa-rupiah"></i> Rupiah</a></li>
@@ -76,8 +79,9 @@
 								<form>
 									<select class="input-select">
 										<option value="0">Merek</option>
-										<option value="1">Yamaha</option>
-										<option value="1">Honda</option>
+										<?php foreach ($merks as $merk) : ?>
+										<option value="<?= $merk['merk'] ?>"><?= $merk['merk'] ?></option>
+										<?php endforeach; ?>
 									</select>
 									<input class="input" placeholder="Cari">
 									<button class="search-btn">Search</button>

@@ -13,16 +13,48 @@ class Suku_cadang extends CI_Controller {
         $this->load->model('CategoryModel', 'Category');
     }
 
+	//Show All Products
 	public function index()
 	{
 		$data = [
-			'products' => $this->Model->listProduct()
+			'products' => $this->Model->listProduct(),
+			
 		];
 
-        $this->load->view('customer/layout/header');
-		$this->load->view('customer/layout/asides');
+		$data2 = [
+			'categories' => $this->Category->listCategory(),
+		];
+
+		$data3 = [
+			'merks' => $this->Merk->listMerk()
+		];
+
+        $this->load->view('customer/layout/header',$data3);
+		$this->load->view('customer/layout/asides', $data2, $data3);
 		$this->load->view('customer/products', $data);
 		$this->load->view('customer/layout/footer');
 	}
+
+	//Products by Merek
+    public function ProductsByMerk()
+    {
+        // all category
+        $data = [
+            'products' => $this->Model->listProduct()
+		];
+		
+		$data2 = [
+            'categories' => $this->Category->listCategory()
+		];
+		
+		$data3 = [
+			'merks' => $this->Merk->listMerk()
+		];
+
+		$this->load->view('customer/layout/header', $data3);
+		$this->load->view('customer/layout/asides', $data2, $data3);
+		$this->load->view('customer/products', $data);
+		$this->load->view('customer/layout/footer');
+    }
 }
 ?>

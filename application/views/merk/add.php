@@ -49,7 +49,7 @@
               <!-- /.card-body -->
 
               <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Tambah Produk</button>
+                <button type="submit" class="btn btn-primary">Tambah Merek</button>
               </div>
             </form>
           </div>

@@ -1,6 +1,5 @@
-
-		<!-- NAVIGATION -->
-		<nav id="navigation">
+        <!-- NAVIGATION -->
+        <nav id="navigation">
 			<!-- container -->
 			<div class="container">
 				<!-- responsive-nav -->
@@ -8,10 +7,10 @@
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
 						<li ><a href="<?= base_url() ?>">Home</a></li>
-						<li class="active"><a href="<?= base_url() ?>kategori">Kategori</a></li>
+						<li><a href="<?= base_url() ?>kategori">Kategori</a></li>
 						<li><a href="<?= base_url() ?>merk">Brands</a></li>
 						<li><a href="<?= base_url() ?>tipe-kendaraan">Tipe Kendaraan</a></li>
-						<li><a href="<?= base_url() ?>jual-beli-sparepart-motor/jual-harga-distributor">Suku-Cadang</a></li>
+						<li class="active"><a href="<?= base_url() ?>jual-beli-sparepart-motor/jual-harga-distributor">Suku-Cadang</a></li>
 					</ul>
 					<!-- /NAV -->
 				</div>
@@ -19,20 +18,19 @@
 			</div>
 			<!-- /container -->
 		</nav>
-		<!-- /NAVIGATION -->
+        <!-- /NAVIGATION -->
 
-		
-		<!-- BREADCRUMB -->
+
+        <!-- BREADCRUMB -->
 		<div id="breadcrumb" class="section">
 			<!-- container -->
 			<div class="container">
 				<!-- row -->
 				<div class="row">
 					<div class="col-md-12">
-						<h3 class="breadcrumb-header">Kategori</h3>
 						<ul class="breadcrumb-tree">
 							<li><a href="<?= base_url() ?>">Home</a></li>
-							<li class="active">Kategori</li>
+							<li><a href="#">Profile</a></li>
 						</ul>
 					</div>
 				</div>
@@ -41,24 +39,3 @@
 			<!-- /container -->
 		</div>
 		<!-- /BREADCRUMB -->
-
-		<!-- SECTION -->
-		<div class="section">
-			<!-- container -->
-			<div class="container">
-				<!-- row -->
-				<div class="row">
-					<div class="list-group">
-					<?php foreach ($categories as $category) : ?>
-						<a href="#" class="list-group-item list-group-item-action"><?= $category['category'] ?></a>
-					<?php endforeach; ?>
-					</div>
-				</div>
-				<!-- /row -->
-			</div>
-			<!-- /container -->
-		</div>
-		<!-- /SECTION -->
-
-
-		

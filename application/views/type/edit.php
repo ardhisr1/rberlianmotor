@@ -37,7 +37,7 @@
             <!-- /.card-header -->
 
               <!-- form start -->
-            <form role="form" action="<?= base_url('Type/Edit/'. $type['type_id']) ?>" method="post" enctype="multipart/form-data">
+            <form role="form" action="<?= base_url('edited-type/'. $type['type_id']) ?>" method="post" enctype="multipart/form-data">
               <div class="card-body">
 
                 <!-- Type -->

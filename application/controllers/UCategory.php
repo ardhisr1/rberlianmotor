@@ -7,6 +7,7 @@ class UCategory extends CI_Controller
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model('CategoryModel', 'Model');
+        $this->load->model('MerkModel', 'Merk');
     }
 
     function validate()
@@ -23,8 +24,12 @@ class UCategory extends CI_Controller
             'categories' => $this->Model->listCategory()
         ];
         
-        $this->load->view('customer/layout/header');
-        $this->load->view('customer/layout/asides');
+        $data3 = [
+			'merks' => $this->Merk->listMerk()
+		];
+	
+		$this->load->view('customer/layout/header', $data3);
+        //$this->load->view('customer/layout/asides');
         $this->load->view('customer/category', $data);
         $this->load->view('customer/layout/footer');
     }

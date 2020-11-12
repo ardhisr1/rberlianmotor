@@ -26,4 +26,19 @@ class ProductModel extends CI_Model
         $this->db->where('product_id', $id);
         return $this->db->delete('products');
     }
+
+    public function getProductsByMerk($Merk){
+        $this->db->get_where('show_product', ['Merk' => $Merk])->row_array();
+    }
+    
+    public function getProductsByCategory($Category){
+        $this->db->get_where('show_product', ['Merk' => $Merk])->row_array();
+    }
+    
+    public function getProductsByType($Type)
+    {
+        $this->db->get_where('show_product', ['Type' => $Type])->row_array();
+    }
+
+    
 }

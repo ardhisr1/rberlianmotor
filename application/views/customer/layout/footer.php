@@ -6,10 +6,10 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="newsletter">
-							<p>Sign Up for the <strong>NEWSLETTER</strong></p>
+							<p>Hubungi kami via <strong>WhatsApp</strong></p>
 							<form>
 								<input class="input" type="email" placeholder="Enter Your Email">
-								<button class="newsletter-btn"><i class="fa fa-envelope"></i> Subscribe</button>
+								<button class="newsletter-btn"><i class="fa fa-envelope"></i>  <a href="https://wa.me/6281383328110">Kirim Pesan</a></button>
 							</form>
 							<ul class="newsletter-follow">
 								<li>
@@ -89,7 +89,7 @@
 								<ul class="footer-links">
 									<li><a href="#">Akun Anda</a></li>
 									<li><a href="#">Lihat Keranjang</a></li>
-									<li><a href="#">Lacak Pesanan</a></li>
+									<li><a href="https://cekresi.com/">Lacak Pesanan</a></li>
 									<li><a href="#">Bantuan</a></li>
 								</ul>
 							</div>

@@ -35,7 +35,7 @@
             <!-- /.card-header -->
 
               <!-- form start -->
-            <form role="form" action="<?= base_url('Merk/Edit/'. $merk['merk_id']) ?>" method="post" enctype="multipart/form-data">
+            <form role="form" action="<?= base_url('edited-merk/'. $merk['merk_id']) ?>" method="post" enctype="multipart/form-data">
               <div class="card-body">
 
                 <!-- Merk -->
@@ -49,7 +49,7 @@
               <!-- /.card-body -->
 
               <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Edit Katagori</button>
+                <button type="submit" class="btn btn-primary">Edit Merk</button>
               </div>
             </form>
           </div>
