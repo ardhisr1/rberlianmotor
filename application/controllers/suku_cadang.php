@@ -36,11 +36,32 @@ class Suku_cadang extends CI_Controller {
 	}
 
 	//Products by Merek
-    public function ProductsByMerk()
+    public function ProductsByMerk($id = null)
     {
-        // all category
+		// show detail product
+		if ($id == null) {
+			redirect('merk');
+		} else {
+				$data = [
+					'products' => $this->Model->getProductsByMerk($id)
+				];
+				$data2 = [
+					'categories' => $this->Category->listCategory()
+				];
+				$data3 = [
+					'merks' => $this->Merk->listMerk()
+				];
+				
+				$this->load->view('customer/layout/header', $data3);
+				$this->load->view('customer/layout/asides', $data2, $data3);
+				$this->load->view('customer/products', $data);
+				$this->load->view('customer/layout/footer');
+		}
+	}	
+        /*all category
         $data = [
-            'products' => $this->Model->listProduct()
+			'products' => $this->Model->getProductsByMerk($merk),
+			''
 		];
 		
 		$data2 = [
@@ -49,12 +70,29 @@ class Suku_cadang extends CI_Controller {
 		
 		$data3 = [
 			'merks' => $this->Merk->listMerk()
-		];
+		];*/
+	
+	public function searchByMerk($Words = null, $merk = null)
+	{
+		if ($id == null) {
+			redirect('merk');
+		} else {
+				$data = [
+					'products' => $this->Model->searchProductsByMerk($merk,$Words)
+				];
+				$data2 = [
+					'categories' => $this->Category->listCategory()
+				];
+				$data3 = [
+					'merks' => $this->Merk->listMerk()
+				];
+				
+				$this->load->view('customer/layout/header', $data3);
+				$this->load->view('customer/layout/asides', $data2, $data3);
+				$this->load->view('customer/products', $data);
+				$this->load->view('customer/layout/footer');
+		}
 
-		$this->load->view('customer/layout/header', $data3);
-		$this->load->view('customer/layout/asides', $data2, $data3);
-		$this->load->view('customer/products', $data);
-		$this->load->view('customer/layout/footer');
-    }
+	}
 }
 ?>

@@ -28,16 +28,23 @@ class ProductModel extends CI_Model
     }
 
     public function getProductsByMerk($Merk){
-        $this->db->get_where('show_product', ['Merk' => $Merk])->row_array();
+        $this->db->get_where('show_products', ['merk' => $Merk])->result_array();
     }
     
     public function getProductsByCategory($Category){
-        $this->db->get_where('show_product', ['Merk' => $Merk])->row_array();
+        $this->db->get_where('show_products', ['category' => $Category])->result_array();
     }
     
     public function getProductsByType($Type)
     {
-        $this->db->get_where('show_product', ['Type' => $Type])->row_array();
+        $this->db->get_where('show_products', ['type' => $Type])->result_array();
+    }
+
+    public function searchProductByMerk($Merk, $Words)
+    {
+        //$this->db->select('(SELECT * FROM show_products WHERE merk ='+ $Merk +'LIKE '., );
+        $this->db->like('name',['name'=> $Words]);
+        $this->db->get_where('show_products',['merk' => $Merk ])->result_array();
     }
 
     

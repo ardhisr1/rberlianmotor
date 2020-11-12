@@ -51,7 +51,7 @@
 				<div class="row">
 					<div class="list-group">
 					<?php foreach ($merks as $merk) : ?>
-						<a href="#" class="list-group-item list-group-item-action"><?= $merk['merk'] ?></a>
+						<a href="<?= base_url('jual-beli-sparepart-motor/'. $merk['merk']) ?>" class="list-group-item list-group-item-action"><?= $merk['merk'] ?></a>
 					<?php endforeach; ?>
 					</div>
 				</div>

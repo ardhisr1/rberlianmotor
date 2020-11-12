@@ -20,59 +20,6 @@
 		</nav>
 		<!-- /NAVIGATION -->
 
-		<!-- SECTION -->
-		<div class="section">
-			<!-- container -->
-			<div class="container">
-				<!-- row -->
-				<div class="row">
-					<!-- shop -->
-					<div class="col-md-4 col-xs-6">
-						<div class="shop">
-							<div class="shop-img">
-								<img src="<?= base_url(); ?>assets/electro/img/shop01.png" alt="">
-							</div>
-							<div class="shop-body">
-								<h3>Suku Cadang<br>Yamaha</h3>
-								<a href="<?= base_url()?>auth/login" class="cta-btn">Pesan Sekarang <i class="fa fa-arrow-circle-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<!-- /shop -->
-
-					<!-- shop -->
-					<div class="col-md-4 col-xs-6">
-						<div class="shop">
-							<div class="shop-img">
-								<img src="<?= base_url(); ?>assets/electro/img/shop03.png" alt="">
-							</div>
-							<div class="shop-body">
-								<h3>Suku Cadang<br>Honda</h3>
-								<a href="<?= base_url()?>auth/login" class="cta-btn">Pesan Sekarang <i class="fa fa-arrow-circle-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<!-- /shop -->
-
-					<!-- shop -->
-					<div class="col-md-4 col-xs-6">
-						<div class="shop">
-							<div class="shop-img">
-								<img src="<?= base_url(); ?>assets/electro/img/shop02.png" alt="">
-							</div>
-							<div class="shop-body">
-								<h3>Suku Cadang<br>Suzuki</h3>
-								<a href="<?= base_url()?>auth/login" class="cta-btn">Pesan Sekarang <i class="fa fa-arrow-circle-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<!-- /shop -->
-				</div>
-				<!-- /row -->
-			</div>
-			<!-- /container -->
-		</div>
-		<!-- /SECTION -->
 
 		<!-- SECTION -->
 		<div class="section">
@@ -112,12 +59,12 @@
 												<h3 class="product-name"><a href="#"><?= $product['name'] ?></a></h3>
 												<h4 class="product-price"><?= number_format($product['price']) ?><del class="product-old-price"></del></h4>
 												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Tambah ke Keinginan</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Lihat</span></button>
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Tambah ke Keranjang</button>
 											</div>
 										</div>
 										<!-- /product -->
@@ -372,7 +319,7 @@
 				<div class="row">
 					<div class="col-md-4 col-xs-6">
 						<div class="section-title">
-							<h4 class="title">Top selling</h4>
+							<h4 class="title">BAN</h4>
 							<div class="section-nav">
 								<div id="slick-nav-3" class="products-slick-nav"></div>
 							</div>
@@ -465,7 +412,7 @@
 
 					<div class="col-md-4 col-xs-6">
 						<div class="section-title">
-							<h4 class="title">Top selling</h4>
+							<h4 class="title">Aki</h4>
 							<div class="section-nav">
 								<div id="slick-nav-4" class="products-slick-nav"></div>
 							</div>
@@ -560,7 +507,7 @@
 
 					<div class="col-md-4 col-xs-6">
 						<div class="section-title">
-							<h4 class="title">Top selling</h4>
+							<h4 class="title">BODY PART</h4>
 							<div class="section-nav">
 								<div id="slick-nav-5" class="products-slick-nav"></div>
 							</div>

@@ -85,7 +85,7 @@
 						</div>
 						<!-- /aside Widget -->
 
-						<!-- aside Widget -->
+						<!-- aside Widget 
 						<div class="aside">
 							<h3 class="aside-title">Rekomendasi</h3>
 							<div class="product-widget">
@@ -121,7 +121,7 @@
 								</div>
 							</div>
 						</div>
-						<!-- /aside Widget -->
+						 /aside Widget -->
 					</div>
                     <!-- /ASIDE -->
                     

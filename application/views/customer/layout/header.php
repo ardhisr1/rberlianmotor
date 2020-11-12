@@ -67,7 +67,7 @@
 						<div class="col-md-3">
 							<div class="header-logo">
 								<a href="<?= base_url(); ?>" class="logo">
-									<img src="<?= base_url(); ?>assets/electro/img/logo.png" alt="">
+									<img src="<?= base_url(); ?>assets/electro/img/logo1.jpeg" height="125px" width="225px" alt="">
 								</a>
 							</div>
 						</div>
@@ -84,7 +84,7 @@
 										<?php endforeach; ?>
 									</select>
 									<input class="input" placeholder="Cari">
-									<button class="search-btn">Search</button>
+									<button type="submit" class="search-btn">Cari</button>
 								</form>
 							</div>
 						</div>
@@ -101,21 +101,12 @@
 						<!-- ACCOUNT -->
 						<div class="col-md-3 clearfix">
 							<div class="header-ctn">
-								<!-- Wishlist -->
-								<div>
-									<a href="<?= base_url() ?>auth/login">
-										<i class="fa fa-heart-o"></i>
-										<span>Your Wishlist</span>
-										<div class="qty">2</div>
-									</a>
-								</div>
-								<!-- /Wishlist -->
 
 								<!-- Cart -->
 								<div class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 										<i class="fa fa-shopping-cart"></i>
-										<span>Your Cart</span>
+										<span>Keranjang Belanja</span>
 										<div class="qty">3</div>
 									</a>
 									<div class="cart-dropdown">
@@ -143,12 +134,12 @@
 											</div>
 										</div>
 										<div class="cart-summary">
-											<small>3 Item(s) selected</small>
-											<h5>SUBTOTAL: $2940.00</h5>
+											<small>3 Item(s) terpilih</small>
+											<h5>SUBTOTAL: Rp 15.000.000</h5>
 										</div>
 										<div class="cart-btns">
-											<a href="#">View Cart</a>
-											<a href="<?= base_url() ?>auth/login">Checkout <i class="fa fa-arrow-circle-right"></i></a>
+											<a href="#">Lihat Keranjang</a>
+											<a href="<?= base_url() ?>auth/login">Pesan Sekarang <i class="fa fa-arrow-circle-right"></i></a>
 										</div>
 									</div>
 								</div>

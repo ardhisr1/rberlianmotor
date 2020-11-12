@@ -52,6 +52,7 @@
 										<!-- /product -->
 							</div>
 							<!-- /product -->
+							
 							<?php endforeach; ?>
 
 							<div class="clearfix visible-sm visible-xs"></div>

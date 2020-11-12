@@ -56,6 +56,7 @@ $route['translate_uri_dashes'] = FALSE;
 //Landing Route Style
 // 
 $route['jual-beli-sparepart-motor/jual-harga-distributor']  = 'Suku_Cadang/index';
+$route['jual-beli-sparepart-motor/(:any)'] = 'Suku_Cadang/ProductsByMerk/$1';
 $route['kategori']  = 'UCategory/index';
 $route['tipe-kendaraan']  = 'UTipe/index';
 $route['merk']  = 'UMerk/index';
@@ -70,7 +71,7 @@ $route['edit-product'] = 'admin/Products/edit'; // WITHOUT ID RETURN ERROR
 $route['add-product'] = 'admin/Products/add'; // ADD PRODUCT
 $route['list-product'] = 'admin/Products/index'; // LIST PRODUCT
 $route['delete-product/(:any)'] = 'admin/Products/delete/$1'; // DELETE Product
-$route['delete-product'] = 'admin/Products/delete/'; // DELETE Product WITHOUT ID == RETURN FALSE
+$route['delete-product'] = 'admin/Products/delete/'; // DELETE Product WITHOUT ID == RETURN 
 
 
 // MERK ROUTE

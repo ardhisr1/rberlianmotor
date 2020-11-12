@@ -60,6 +60,8 @@
 								<ul class="footer-links">
 									<li><a href="#">BCA Rek. 012390192301 A.n </a></li>
 									<li><a href="#">BNI Rek. 000930129012 A.n </a></li>
+									<li><a href="#">BRI Rek. 000930129012 A.n </a></li>
+									<li><a href="#">MANDIRI Rek. 000930129012 A.n </a></li>
 								</ul><br>
 								<p>Cash On Delivery (COD)</p>
 								<P>Khusus daerah</P>
